@@ -2,7 +2,7 @@ import Cart from './service/Cart';
 import Book from './domain/Book';
 import MusicAlbum from './domain/MusicAlbum';
 import Movie from './domain/Movie';
-import Gadget from './domain/gadget';
+import Gadget from './domain/Gadget';
 
 const cart = new Cart();
 console.log(cart.items);
