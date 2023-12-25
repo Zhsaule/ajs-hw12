@@ -22,6 +22,9 @@ export default class Cart {
 
     getTotalCostWithDiscount(discount: number): number {
         const totalCost = this.getTotalCost();
+        if (discount >= 100) {
+            discount = 0;
+        }
         const discountedCost = totalCost - (totalCost * discount / 100);
         return discountedCost;
     }
@@ -29,7 +32,7 @@ export default class Cart {
     removeItemById(id: number): void {
         const index = this._items.findIndex(item => item.id === id);
         if (index !== -1) {
-        this._items.splice(index, 1);
+            this._items.splice(index, 1);
         }
     }
 

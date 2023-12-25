@@ -46,6 +46,16 @@ describe('Cart', () => {
         expect(totalCostWithDiscount).toBe(63);
     });
 
+    test('should calculate the total cost with discount', () => {
+        cart.add(item1);
+        cart.add(item2);
+        cart.add(item3);
+
+        const totalCostWithDiscount = cart.getTotalCostWithDiscount(100);
+
+        expect(totalCostWithDiscount).toBe(70);
+    });
+
     test('should remove an item from the cart by id', () => {
         cart.add(item1);
         cart.add(item2);
