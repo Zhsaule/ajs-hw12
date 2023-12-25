@@ -46,7 +46,7 @@ describe('Cart', () => {
         expect(totalCostWithDiscount).toBe(63);
     });
 
-    test('should calculate the total cost without discount', () => {
+    test('should calculate the total cost with discount 100', () => {
         cart.add(item1);
         cart.add(item2);
         cart.add(item3);
